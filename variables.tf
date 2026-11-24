@@ -1,3 +1,10 @@
+variable "resource_group" {
+  description = "A mapping of resource group names to their properties."
+  type = map(object({
+    name     = string
+    location = string
+  }))
+}
 variable "name" {
   description = "The name of the Resource Group. Must be between 1 and 90 characters and cannot end with a period."
   type        = string
